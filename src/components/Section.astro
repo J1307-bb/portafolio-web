@@ -1,0 +1,20 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  icon?: string;
+}
+
+const { text, href, icon } = Astro.props;
+---
+
+<section id={href} class="py-24">
+  <h2
+    class="text-4xl md:text-5xl font-serif font-bold tracking-tighter text-white mb-14 flex items-center gap-3"
+  >
+    {icon && <img src={icon} alt={`${text} icon`} class="w-10 h-10" />}
+    {text}
+  </h2>
+  <slot />
+</section>
+

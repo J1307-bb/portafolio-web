@@ -1,0 +1,69 @@
+---
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import type { ProjectProps } from "@types";
+
+interface Props {
+  projects: ProjectProps[];
+}
+
+const { projects } = Astro.props;
+---
+
+<Section text="Proyectos" href="projects" icon="src/icons/dev.svg" >
+  {
+    projects.map(({ name, summary, image, linkPreview, linkSource, techs }) => (
+      <div class="w-full min-h-96 relative z-[1] bg-[#1c232d]/85 bg-difu before:content-[''] before:rounded-2xl before:absolute before:z-[-1] before:opacity-[5%] before:inset-0 before:bg-[url(/raja.png)] before:bg-repeat before:bg-[length:128px] rounded-2xl flex flex-col sm:grid sm:grid-cols-2 mb-10">
+        <div class="p-6 py-12">
+          <h3 class="text-3xl font-medium font-serif mb-5 text-primary">
+            {name}
+          </h3>
+          <div class="flex gap-3 flex-wrap mb-4">
+            {techs?.map(({ name, icon }) => (
+              <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-[#2e3b4e] text-white">
+                <img
+                  src={`src/icons/techs/${icon}`}
+                  alt={`${name} icon`}
+                  class="w-5 h-5"
+                />
+                <span class="text-sm">{name}</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-neutral text-base pt-2">{summary}</p>
+          <div class="pt-10 flex gap-5 text-white justify-center">
+            {linkSource && (
+              <a
+                href={linkSource}
+                target="_blank"
+                class="flex gap-1 border border-white px-3 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg"
+              >
+                <Icon name="github" size={24} />
+                Código
+              </a>
+            )}
+
+            <a
+              href={linkPreview}
+              target="_blank"
+              class="flex gap-1 border border-white px-3 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg"
+            >
+              <Icon name="link" size={24} />
+              Vista Previa
+            </a>
+          </div>
+        </div>
+        <div class="flex items-end">
+          <Image
+            class="w-full h-[70%] object-cover object-left-top md:rounded-ss-xl"
+            src={image}
+            alt={name}
+            width="560"
+            height="368"
+          />
+        </div>
+      </div>
+    ))
+  }
+</Section>
