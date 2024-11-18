@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
   text: string;
   href: string;
@@ -12,7 +14,7 @@ const { text, href, icon } = Astro.props;
   <h2
     class="text-4xl md:text-5xl font-serif font-bold tracking-tighter text-white mb-14 flex items-center gap-3"
   >
-    {icon && <img src={icon} alt={`${text} icon`} class="w-10 h-10" />}
+    {icon && <Icon name={`${icon}`} size={50} />}
     {text}
   </h2>
   <slot />
