@@ -14,7 +14,10 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   socialLinks: [
     { text: "Twitter", href: "" },
-    { text: "LinkedIn", href: "https://www.linkedin.com/in/edgar-jair-badillo-ba%C3%B1uelos-33a31a200/" },
+    {
+      text: "LinkedIn",
+      href: "https://www.linkedin.com/in/edgar-jair-badillo-ba%C3%B1uelos-33a31a200/",
+    },
     { text: "Github", href: "https://github.com/J1307-bb" },
     { text: "Youtube", href: "" },
   ],
@@ -30,7 +33,8 @@ export const SITE_CONTENT: SiteContent = {
       "Desarrollador de software con sede en Kuzamil, México. Me especializo en diseño de UI, desarrollo y mantenimiento de aplicaciones web y móviles.",
     email: "ebadillobanuelos13@gmail.com",
     github: "https://github.com/J1307-bb",
-    linkedin: "https://www.linkedin.com/in/edgar-jair-badillo-ba%C3%B1uelos-33a31a200/",
+    linkedin:
+      "https://www.linkedin.com/in/edgar-jair-badillo-ba%C3%B1uelos-33a31a200/",
   },
   experience: [
     {
@@ -39,16 +43,16 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Mayo 2023",
       endDate: "Marzo 2024",
       summary: [
-          "Diseño y desarrollo una aplicacion movil para el control de acceso de zonas residenciales, usando tecnologias como: Ionic y Angular"
-        ],
+        "Diseño y desarrollo una aplicacion movil para el control de acceso de zonas residenciales, usando tecnologias como: Ionic y Angular",
+      ],
     },
-
   ],
   projects: [
     {
       name: "Delicias Web App",
-      summary: "Una aplicación web diseñada para facilitar la cotización y reservación de banquetes para eventos sociales, ofreciendo una experiencia personalizada y ágil.",
-      linkPreview: "/",
+      summary:
+        "Una aplicación web diseñada para facilitar la cotización y reservación de banquetes para eventos sociales, ofreciendo una experiencia personalizada y ágil.",
+      linkPreview: "https://deliciasapp.netlify.app/",
       linkSource: "https://github.com/immois/astro-zen",
       image: "/delicias.png",
       techs: [
@@ -56,14 +60,15 @@ export const SITE_CONTENT: SiteContent = {
         { name: "Tailwind CSS", icon: "tailwindcss" },
         { name: ".NET", icon: "dotnet" },
         { name: "TypeScript", icon: "typescript" },
-        { name: "Mercado Pago", icon: "mercado-libre" },
+        { name: "Mercado Pago", icon: "mercadolibre" },
       ],
     },
     {
       name: "Smart Code Access",
-      summary: "Aplicación móvil que permite a los residentes de zonas residenciales gestionar y controlar el acceso de manera segura y eficiente.",
+      summary:
+        "Aplicación móvil que permite a los residentes de zonas residenciales gestionar y controlar el acceso de manera segura y eficiente.",
       linkPreview: "/",
-      image: "/SCA1.jpg",
+      image: "/SCA-banner.png",
       techs: [
         { name: "Ionic", icon: "ionic" },
         { name: "Angular", icon: "angular" },
@@ -73,7 +78,8 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Tasky",
-      summary: "Herramienta web para gestionar tareas y proyectos, ayudando a los usuarios a organizar y priorizar sus actividades diarias de manera efectiva.",
+      summary:
+        "Herramienta web para gestionar tareas y proyectos, ayudando a los usuarios a organizar y priorizar sus actividades diarias de manera efectiva.",
       linkPreview: "/",
       linkSource: "/",
       image: "/tasky.png",
@@ -87,10 +93,11 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Campus Connect",
-      summary: "Aplicación móvil centrada en la gestión académica de estudiantes y profesores, mejorando la organización de tareas, calificaciones, recursos y encuestas.",
+      summary:
+        "Aplicación móvil centrada en la gestión académica de estudiantes y profesores, mejorando la organización de tareas, calificaciones, recursos y encuestas.",
       linkPreview: "/",
       linkSource: "/",
-      image: "/campus-connect.jpg",
+      image: "/campus-connect-banner.png",
       techs: [
         { name: "React", icon: "react" },
         { name: "Expo", icon: "expo" },
@@ -101,10 +108,11 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "ARqueologia",
-      summary: "Aplicación móvil que ofrece una experiencia enriquecida sobre zonas arqueológicas de México, brindando información detallada y elementos de realidad aumentada (AR) sobre sitios icónicos.",
+      summary:
+        "Aplicación móvil que ofrece una experiencia enriquecida sobre zonas arqueológicas de México, brindando información detallada y elementos de realidad aumentada (AR) sobre sitios icónicos.",
       linkPreview: "https://arquelogiamexicoar.netlify.app/home/principal",
       linkSource: "/",
-      image: "/arqueologia.jpg",
+      image: "/arqueologia-banner.png",
       techs: [
         { name: "Ionic", icon: "ionic" },
         { name: "Angular", icon: "angular" },
@@ -112,7 +120,7 @@ export const SITE_CONTENT: SiteContent = {
         { name: "TypeScript", icon: "typescript" },
         { name: "Firebase", icon: "firebase" },
       ],
-    }
+    },
   ],
   about: {
     description: `

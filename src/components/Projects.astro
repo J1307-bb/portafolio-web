@@ -9,57 +9,92 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+
+function colorPicker(name: string) {
+  const colorVariants: { [key: string]: string } = {
+    astro: "bg-[#7f4932]",
+    html: "bg-[#7f4932]",
+    css: "bg-[#324b7f]",
+    sass: "bg-[#602957]",
+    javascript: "bg-[#665e24]",
+    typescript: "bg-[#32547f]",
+    react: "bg-[#32547f]",
+    tailwindcss: "bg-[#1a5b77]",
+    php: "bg-[#616161]",
+    wordpress: "bg-[#3a4367]",
+    vue: "bg-[#042914]",
+    firebase: "bg-[#7f6932]",
+    nodejs: "bg-[#296029]",
+    nestjs: "bg-[#9d1a2e]",
+    pwa: "bg-[#c4c4c4]",
+    mercadolibre: "bg-[#004a65]",
+    angular: "bg-[#76001c]",
+    ionic: "bg-[#2759b2]",
+    dotnet: "bg-[#37214f]",
+    mongodb: "bg-[#0a5d2d]",
+    expo: "bg-[#0c5589]",
+  };
+
+  return colorVariants[name] || "bg-[#000000]";
+}
 ---
 
-<Section text="Proyectos" href="projects" icon="dev" >
-  {
-    projects.map(({ name, summary, image, linkPreview, linkSource, techs }) => (
-      <div class="w-full min-h-96 relative z-[1] bg-[#1c232d]/85 bg-difu before:content-[''] before:rounded-2xl before:absolute before:z-[-1] before:opacity-[5%] before:inset-0 before:bg-[url(/raja.png)] before:bg-repeat before:bg-[length:128px] rounded-2xl flex flex-col sm:grid sm:grid-cols-2 mb-10">
-        <div class="p-6 py-12">
-          <h3 class="text-3xl font-medium font-serif mb-5 text-primary">
-            {name}
-          </h3>
-          <div class="flex gap-3 flex-wrap mb-4">
-            {techs?.map(({ name, icon }) => (
-              <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-[#2e3b4e] text-white">
-                <Icon name={`techs/${icon}`} size={20} />
-                <span class="text-sm">{name}</span>
+<Section text="Proyectos" href="projects" icon="dev">
+  <div class="flex flex-col gap-12">
+    {
+      projects.map(
+        ({ name, summary, image, linkPreview, linkSource, techs }, index) => (
+          <div
+            class={`flex flex-col lg:flex-row ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 items-center min-h-96 relative z-[1] bg-[#1c232d]/85 bg-difu before:content-[''] before:rounded-2xl before:absolute before:z-[-1] before:opacity-[5%] before:inset-0 before:bg-[url(/raja.png)] before:bg-repeat before:bg-[length:128px] rounded-2xl overflow-hidden shadow-md duration-500 transition-shadow hover:shadow-xl hover:shadow-primary/20`}
+          >
+            <div class="lg:w-1/2 w-full h-72 lg:h-auto overflow-hidden relative flex items-end">
+              <Image
+                class={`w-full h-full object-cover  rounded-lg lg:rounded-none  ${index % 2 === 0 ? "lg:rounded-r-2xl" : "lg:rounded-l-2xl"}  `}
+                src={image}
+                alt={name}
+                width="560"
+                height="368"
+              />
+            </div>
+            <div class="p-6 lg:w-1/2 w-full flex flex-col justify-between">
+              <h3 class="text-3xl font-medium font-serif mb-4 text-primary">
+                {name}
+              </h3>
+              <div class="flex gap-2 flex-wrap mb-4">
+                {techs?.map(({ name, icon }) => (
+                  <div
+                    class={`flex items-center gap-2 px-3 py-1 rounded-full ${colorPicker(icon)} text-white`}
+                  >
+                    <Icon name={`techs/${icon}`} size={20} />
+                    <span class="text-sm">{name}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+              <p class="text-neutral text-base mb-6">{summary}</p>
+              <div class="flex gap-4 ">
+                {linkSource && (
+                  <a
+                    href={linkSource}
+                    target="_blank"
+                    class="flex gap-1 items-center border border-primary text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                  >
+                    <Icon name="github" size={20} />
+                    Código
+                  </a>
+                )}
+                <a
+                  href={linkPreview}
+                  target="_blank"
+                  class="flex gap-1 items-center border border-primary text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <Icon name="link" size={20} />
+                  Vista Previa
+                </a>
+              </div>
+            </div>
           </div>
-          <p class="text-neutral text-base pt-2">{summary}</p>
-          <div class="pt-10 flex gap-5 text-white justify-center">
-            {linkSource && (
-              <a
-                href={linkSource}
-                target="_blank"
-                class="flex gap-1 border border-white px-3 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg"
-              >
-                <Icon name="github" size={24} />
-                Código
-              </a>
-            )}
-
-            <a
-              href={linkPreview}
-              target="_blank"
-              class="flex gap-1 border border-white px-3 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg"
-            >
-              <Icon name="link" size={24} />
-              Vista Previa
-            </a>
-          </div>
-        </div>
-        <div class="flex items-end">
-          <Image
-            class="w-full h-[70%] object-cover object-left-top md:rounded-ss-xl"
-            src={image}
-            alt={name}
-            width="560"
-            height="368"
-          />
-        </div>
-      </div>
-    ))
-  }
+        ),
+      )
+    }
+  </div>
 </Section>
