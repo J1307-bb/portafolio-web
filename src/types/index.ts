@@ -13,6 +13,7 @@ export interface SiteContent {
   experience: ExperienceProps[];
   projects: ProjectProps[];
   about: AboutProps;
+  techs: TechnologiesProps;
 }
 
 export interface HeroProps {
@@ -39,6 +40,11 @@ export interface ProjectProps {
   techs?: TechnologiesProjectProps[];
   linkPreview?: string;
   linkSource?: string;
+}
+
+export interface TechnologiesProps {
+  skills: { name: string; icon: string }[];
+  tools: { name: string; icon: string }[];
 }
 
 export interface TechnologiesProjectProps {

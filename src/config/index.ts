@@ -10,16 +10,16 @@ export const SITE_CONFIG: SiteConfig = {
   navLinks: [
     { text: "Experencia", href: "#experience" },
     { text: "Proyectos", href: "#projects" },
+    { text: "Tecnologias", href: "#techs" },
     { text: "Sobre mi", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "" },
+    { text: "WhatsApp", href: "https://w.app/qsuS5m" },
     {
       text: "LinkedIn",
       href: "https://www.linkedin.com/in/edgar-jair-badillo-ba%C3%B1uelos-33a31a200/",
     },
     { text: "Github", href: "https://github.com/J1307-bb" },
-    { text: "Youtube", href: "" },
   ],
   socialImage: "/zen-og.png",
   canonicalURL: "https://astro-zen.vercel.app",
@@ -28,9 +28,9 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Jair Badillo",
-    specialty: "Mobile & Web Developer",
+    specialty: "Desarrollo Web y Móvil",
     summary:
-      "Desarrollador de software con sede en Kuzamil, México. Me especializo en diseño de UI, desarrollo y mantenimiento de aplicaciones web y móviles.",
+      "Desarrollador Full Stack con experiencia en la creación de aplicaciones web y móviles, abarcando tanto el diseño de interfaces intuitivas como el desarrollo de backend robustos y escalables. Mi objetivo es ofrecer soluciones integrales y modernas para cada proyecto.",
     email: "ebadillobanuelos13@gmail.com",
     github: "https://github.com/J1307-bb",
     linkedin:
@@ -53,7 +53,6 @@ export const SITE_CONTENT: SiteContent = {
       summary:
         "Una aplicación web diseñada para facilitar la cotización y reservación de banquetes para eventos sociales, ofreciendo una experiencia personalizada y ágil.",
       linkPreview: "https://deliciasapp.netlify.app/",
-      linkSource: "https://github.com/immois/astro-zen",
       image: "/delicias.png",
       techs: [
         { name: "React", icon: "react" },
@@ -85,9 +84,9 @@ export const SITE_CONTENT: SiteContent = {
       image: "/tasky.png",
       techs: [
         { name: "Vue", icon: "vue" },
-        { name: "Tailwind CSS", icon: "tailwindcss" },
         { name: "NestJS", icon: "nestjs" },
         { name: "MongoDB", icon: "mongodb" },
+        { name: "Tailwind CSS", icon: "tailwindcss" },
         { name: "TypeScript", icon: "typescript" },
       ],
     },
@@ -96,7 +95,6 @@ export const SITE_CONTENT: SiteContent = {
       summary:
         "Aplicación móvil centrada en la gestión académica de estudiantes y profesores, mejorando la organización de tareas, calificaciones, recursos y encuestas.",
       linkPreview: "/",
-      linkSource: "/",
       image: "/campus-connect-banner.png",
       techs: [
         { name: "React", icon: "react" },
@@ -122,6 +120,34 @@ export const SITE_CONTENT: SiteContent = {
       ],
     },
   ],
+  techs: 
+    {
+      skills: [
+        { name: "HTML", icon: "html" },
+        { name: "CSS", icon: "css" },
+        { name: "JavaScript", icon: "javascript" },
+        { name: "TypeScript", icon: "typescript" },
+        { name: "React", icon: "react" },
+        { name: "Angular", icon: "angular" },
+        { name: "Tailwind", icon: "tailwindcss" },
+        { name: ".NET", icon: "dotnet" },
+        { name: "NestJS", icon: "nestjs" },
+        { name: "Ionic", icon: "ionic" },
+        { name: "Expo", icon: "expo" },
+
+      ],
+      tools: [
+        { name: "Node.js", icon: "nodejs" },
+        { name: "SQLServer", icon: "microsoftsqlserver" },
+        { name: "MongoDB", icon: "mongodb" },
+        { name: "Firebase", icon: "firebase" },
+        { name: "AWS", icon: "aws-logo" },
+        { name: "Docker", icon: "docker" },
+        { name: "Git", icon: "git" },
+        { name: "Postman", icon: "postman" },
+        { name: "Figma", icon: "figma" },
+      ],
+    },
   about: {
     description: `
       ¡Hola! soy Jair Badillo, un desarrollador apasionado por crear soluciones digitales innovadoras y funcionales. Con experiencia en desarrollo web y móvil, disfruto enfrentando desafíos y construyendo aplicaciones que combinan rendimiento, accesibilidad y diseño intuitivo. Siempre busco aprender y explorar nuevas tecnologías para seguir creciendo profesional y personalmente.
