@@ -82,14 +82,17 @@ function colorPicker(name: string) {
                     Código
                   </a>
                 )}
-                <a
-                  href={linkPreview}
-                  target="_blank"
-                  class="flex gap-1 items-center border border-primary text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
-                >
-                  <Icon name="link" size={20} />
-                  Vista Previa
-                </a>
+                {linkPreview && (
+                  <a
+                    href={linkPreview}
+                    target="_blank"
+                    class="flex gap-1 items-center border border-primary text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                  >
+                    <Icon name="link" size={20} />
+                    Vista Previa
+                  </a>
+                )}
+
               </div>
             </div>
           </div>

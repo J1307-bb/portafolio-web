@@ -6,7 +6,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "Ing. en Desarrollo de software con sede en Kuzamil, México. Me especializo en diseño de UI, desarrollo y mantenimiento de aplicaciones web y móviles.",
   lang: "es",
-  siteLogo: "/alejandro-small.jpg",
+  siteLogo: "/yoperfil.jpeg",
   navLinks: [
     { text: "Experencia", href: "#experience" },
     { text: "Proyectos", href: "#projects" },
