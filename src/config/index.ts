@@ -66,7 +66,6 @@ export const SITE_CONTENT: SiteContent = {
       name: "Smart Code Access",
       summary:
         "Aplicación móvil que permite a los residentes de zonas residenciales gestionar y controlar el acceso de manera segura y eficiente.",
-      linkPreview: "/",
       image: "/SCA-banner.png",
       techs: [
         { name: "Ionic", icon: "ionic" },
@@ -79,8 +78,6 @@ export const SITE_CONTENT: SiteContent = {
       name: "Tasky",
       summary:
         "Herramienta web para gestionar tareas y proyectos, ayudando a los usuarios a organizar y priorizar sus actividades diarias de manera efectiva.",
-      linkPreview: "/",
-      linkSource: "/",
       image: "/tasky.png",
       techs: [
         { name: "Vue", icon: "vue" },
@@ -94,7 +91,6 @@ export const SITE_CONTENT: SiteContent = {
       name: "Campus Connect",
       summary:
         "Aplicación móvil centrada en la gestión académica de estudiantes y profesores, mejorando la organización de tareas, calificaciones, recursos y encuestas.",
-      linkPreview: "/",
       image: "/campus-connect-banner.png",
       techs: [
         { name: "React", icon: "react" },
@@ -109,7 +105,6 @@ export const SITE_CONTENT: SiteContent = {
       summary:
         "Aplicación móvil que ofrece una experiencia enriquecida sobre zonas arqueológicas de México, brindando información detallada y elementos de realidad aumentada (AR) sobre sitios icónicos.",
       linkPreview: "https://arquelogiamexicoar.netlify.app/home/principal",
-      linkSource: "/",
       image: "/arqueologia-banner.png",
       techs: [
         { name: "Ionic", icon: "ionic" },
