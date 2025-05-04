@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Jair Badillo - Mobile & Web Developer",
   author: "Jair Badillo",
   description:
-    "Ing. en Desarrollo de software con sede en Kuzamil, México. Me especializo en diseño de UI, desarrollo y mantenimiento de aplicaciones web y móviles.",
+    "Desarrollador Full Stack con experiencia en la creación de aplicaciones web y móviles.",
   lang: "es",
   siteLogo: "/yoperfil.jpeg",
   navLinks: [
