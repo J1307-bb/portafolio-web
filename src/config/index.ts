@@ -52,7 +52,7 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Enero 2025",
       endDate: "Presente",
       summary: [
-        "Responsable del desarrollo e implementación de nuevas funcionalidades en la aplicación web de la empresa, utilizando tecnologías como React, .NET y SQL Server.r",
+        "Responsable del desarrollo e implementación de nuevas funcionalidades en la aplicación web de la empresa, utilizando tecnologías como React, .NET y SQL Server",
       ],
     }
   ],
