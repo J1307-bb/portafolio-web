@@ -46,6 +46,15 @@ export const SITE_CONTENT: SiteContent = {
         "Diseño y desarrollo una aplicacion movil para el control de acceso de zonas residenciales, usando tecnologias como: Ionic y Angular",
       ],
     },
+    {
+      company: "Ancona Autopartes",
+      position: "Desarrollador Jr. Full Stack",
+      startDate: "Enero 2025",
+      endDate: "Presente",
+      summary: [
+        "Responsable del desarrollo e implementación de nuevas funcionalidades en la aplicación web de la empresa, utilizando tecnologías como React, .NET y SQL Server.r",
+      ],
+    }
   ],
   projects: [
     {
